@@ -1,0 +1,13 @@
+void Show_String(unsigned int x, unsigned int y, unsigned char *DataPointer,signed char GrayScale)
+{
+	unsigned char *SrcPointer;
+	SrcPointer=DataPointer;
+	while(1)
+	{
+	   GuiPutAscii6x12(x,y,*SrcPointer,GrayScale);
+	   SrcPointer++;
+	   x+=8;
+	   if(*SrcPointer==0) break;
+	   
+	}
+}
